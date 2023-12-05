@@ -8,7 +8,11 @@
             .closest("[data-carousel]")
             .querySelector("[data-slides]")
 
+            // now select from children slides
+
         const activeSlide = slides.querySelector("[data-active]")
+
+            // build array for loop
         let newIndex = [...slides.children].indexOf(activeSlide) + offset
         if (newIndex < 0) newIndex = slides.children.length - 1
         if (newIndex >= slides.children.length) newIndex = 0

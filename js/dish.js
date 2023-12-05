@@ -15,14 +15,15 @@ var dishImageWrapper = document.querySelector('.dish-image-wrapper')
 
 window.addEventListener("load", function(){
     console.log('test')
-    dishWrapper.style.backgroundImage = "url(/images/restaurantimages/rome-dishes/carbonara.jpg";
+    dishWrapper.style.backgroundImage = "url(images/restaurantimages/rome-dishes/carbonara.jpg";
     dishTitle.innerHTML = "Carbonara";
     dishImageWrapper.title = "A plate of Carbonara."
+    carbonara.classList.add('dish-active')
 })
 
 
 cacio.addEventListener('click', function(){
-    dishWrapper.style.backgroundImage = "url(/images/restaurantimages/rome-dishes/cacio-e-pepe.jpg";
+    dishWrapper.style.backgroundImage = "url(images/restaurantimages/rome-dishes/cacio-e-pepe.jpg";
     dishTitle.innerHTML = "Cacio e Pepe";
 
 
@@ -36,7 +37,7 @@ cacio.addEventListener('click', function(){
     dishImageWrapper.title = "A plate of Cacio e Pepe."
 })
 carbonara.addEventListener('click', function(){
-    dishWrapper.style.backgroundImage = "url(/images/restaurantimages/rome-dishes/carbonara.jpg";
+    dishWrapper.style.backgroundImage = "url(images/restaurantimages/rome-dishes/carbonara.jpg";
     dishTitle.innerHTML = "Carbonara";
 
     carbonara.classList.add('dish-active')
@@ -50,7 +51,7 @@ carbonara.addEventListener('click', function(){
 
 })
 pizzaBianca.addEventListener('click', function(){
-    dishWrapper.style.backgroundImage = "url(/images/restaurantimages/rome-dishes/pizza-bianca.jpg";
+    dishWrapper.style.backgroundImage = "url(images/restaurantimages/rome-dishes/pizza-bianca.jpg";
     dishTitle.innerHTML = "Pizza Bianca";
 
     pizzaBianca.classList.add('dish-active')
@@ -65,7 +66,7 @@ pizzaBianca.addEventListener('click', function(){
 })
 
 romanTripe.addEventListener('click', function(){
-    dishWrapper.style.backgroundImage = "url(/images/restaurantimages/rome-dishes/roman-tripe.jpg";
+    dishWrapper.style.backgroundImage = "url(images/restaurantimages/rome-dishes/roman-tripe.jpg";
     dishTitle.innerHTML = "Roman Tripe";
 
     romanTripe.classList.add('dish-active')
@@ -78,7 +79,7 @@ romanTripe.addEventListener('click', function(){
     dishImageWrapper.title = "A bowl of Roman tripe."
 })
 suppli.addEventListener('click', function(){
-    dishWrapper.style.backgroundImage = "url(/images/restaurantimages/rome-dishes/suppli.jpg";
+    dishWrapper.style.backgroundImage = "url(images/restaurantimages/rome-dishes/suppli.jpg";
     dishTitle.innerHTML = "Suppli";
 
     suppli.classList.add('dish-active')
