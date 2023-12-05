@@ -486,9 +486,10 @@ p{
     z-index: 5;
     background: black;
     text-align: center;
-    width: 100%;
+    width: 80%;
     color: white;
     padding: 16px;
+    margin: 0 auto;
 }
 
 .c2{
