@@ -15,15 +15,19 @@
     position:relative;
     top: 60px;
 }
+*:focus{
+    border: rgb(255, 255, 255) 5px solid;
+}
 
-/* universal margin */
+/* Body Set */
 
 body{
     background: url(../images/background.jpg) no-repeat fixed;
+    /* Background image made by Frank Pelosi in Photoshop */
     background-size: cover;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu - Desktop Menu Styling is at mediaquery breakpoint */
 
 .desktop-menu{
     visibility: hidden;
@@ -40,6 +44,9 @@ body{
     text-align: right;
     cursor: pointer;
 }
+
+/* Class for Hamburger JS */
+
 .closeIcon{
     display: none;
 }
@@ -59,6 +66,7 @@ body{
     padding-top: 4rem;
     padding-left: 32px;
 }
+/* Class for Hamburger JS */
 
 .showMenu {
     transform: translateY(0);
@@ -80,12 +88,17 @@ body{
     color: white;
 }
 
+/* Set Current Active Page JS */
+
 .current{
     font-weight: bolder;
 }
 .current:before, .current:after{
     content: ' \2022  ';
 }
+
+/* Toggle Menu Visiblity at Breakpoint */
+
 
 @media only screen and (min-width: 990px){
     .desktop-menu{
@@ -159,6 +172,27 @@ p{
     padding: 16px 0;
 }
 
+.button-container{
+    z-index: 2;
+    background: black;
+    text-align: center;
+    width: 80%;
+    color: white; 
+    padding: 16px;
+    margin: 0 auto;
+}
+
+.button-container h4{
+    padding: 16px;
+    color: white;
+    text-decoration: underline;
+}
+
+
+.footer{
+    margin: 100px 0 0 0;
+    width: 100%;
+}
 
 
 
@@ -168,25 +202,13 @@ p{
 .homebanner{
     background: url(../images/homeimages/homebanner.jpg) no-repeat center;
     background-size: cover;
-    background-color: black;
-}
-
-.button-container{
-    z-index: 5;
-    background: black;
-    text-align: center;
-    width: 100%;
-}
-.button-container h4{
-    padding: 16px;
-    color: white;
-    text-decoration: underline;
 }
 
 .feature-top{
     padding: 16px;
 }
 
+/* shadow class for featured shading */
 .shadow{
     background:rgba(0, 0, 0, 0.3);
     padding: 16px;
@@ -217,7 +239,9 @@ p{
     position: absolute;
     box-sizing: border-box;
     inset: 0;
+    /*default slide styling */
     opacity: 0;
+    /* transition for carousel.js */
     transition: 200ms opacity ease-in-out;
     transition-delay: 200ms;
     margin: 0 32px;
@@ -232,6 +256,7 @@ p{
 }
 
 .slide[data-active]{
+    /* set active slide in JS -- changing class */
     opacity:1;
     transition-delay: 0ms;
 }
@@ -253,11 +278,12 @@ p{
     position: absolute;
     background: none;
     border: none;
-    font-size: 4rem;
+    font-size: 2rem;
     top: 50%;
     z-index: 2;
     cursor: pointer;
     background-color:rgba(0, 0, 0, 0.1);
+    padding: 0;
 }
 
 .carousel > ul{
@@ -270,10 +296,9 @@ p{
     color: white;
     background-color:rgba(0, 0, 0, 0.4);
 }
-.carouse-lbutton:focus{
-    outline: 1px solid black;
-}
 
+/*set position of each button - absolute
+ */ 
 .carousel-button.prev{
     left: 0;
 }
@@ -354,6 +379,10 @@ p{
 }
 
 
+
+
+
+
 /* HOME DESKTOP VIEW */
 
 @media only screen and (min-width: 990px){
@@ -371,6 +400,10 @@ p{
     .carousel, .carousel ul{
         height: 800px;
     }
+    .carousel-button{
+        font-size: 4rem;
+}
+
 }
 
 
@@ -404,6 +437,7 @@ p{
 }
 
 .bar-subsection{
+    /* for tilt animation */
     transform-style: preserve-3d;
     transform: perspective (1000px);
     height: 600px;
@@ -411,7 +445,6 @@ p{
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 
 
@@ -425,6 +458,7 @@ p{
 
     }
 }
+/* Most of BARS DESKTOP view is provided in universal media query */
 
 
 
@@ -432,8 +466,7 @@ p{
 
 
 
-
-
+/* RESTAURANT MOBILE DEFAULT */ 
 .restaurantbanner{
     background: url(../images/restaurantimages/restaurant-banner.webp) no-repeat center;
     background-size: cover;
@@ -444,6 +477,7 @@ p{
     grid-template-columns: 1fr;
 }
 
+/* Layout for dish.js Interaction */ 
 .restaurant-column2{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -465,6 +499,8 @@ p{
     background: black;
     color: white;
     background-image: url('images/restaurantimages/rome-dishes/carbonara.jpg');
+    /* images considered decorative following w3 accessibility guidelines https://www.w3.org/WAI/tutorials/images/decorative/*/
+    /* image title included in HTML changes with dish.js selection  per stack overflow recommendations: https://stackoverflow.com/questions/4216035/css-background-image-alt-attribute*/
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -474,6 +510,7 @@ p{
 }
 
 
+/* Set styling for dish.js to remove and add active class */
 .i1:hover, .dish-active{
     text-decoration: underline;
     font-weight: bold;
@@ -484,24 +521,27 @@ p{
     width: 100%;
     object-fit: cover;
 }
-
-
-.button-container{
-    z-index: 5;
-    background: black;
-    text-align: center;
-    width: 80%;
-    color: white;
-    padding: 16px;
-    margin: 0 auto;
-}
-
+/* c2 undergoes slide.js transition. Set default state and transition. */ 
 .c2{
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
     justify-items: center;
+    opacity: 0;
+    /* transition to show */
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%)
 }
+
+/* show state for slide.js to add/remove */
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
 
 .dish-list li{
     font-size: 20px;
@@ -527,6 +567,8 @@ p{
     grid-template-columns: 1fr;
 }
 
+/* Recommended Dish Styling */
+
 .dish-image{
     object-fit: cover;
     height: 250px;
@@ -542,22 +584,9 @@ p{
     padding: 0 0 0 16px;
 }
 
-.c2{
-    opacity: 0;
-    transition: all 1s;
-    filter: blur(5px);
-    transform: translateX(-100%)
-}
-.show{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
 
 
-
-
-
+/* RESTAURANT PAGE DESKTOP VIEW */
 
 @media only screen and (min-width: 990px){
     .restaurant-info{
@@ -585,15 +614,32 @@ p{
 
 
 
+/* REDUCE MOTION */
 
+  @media (prefers-reduced-motion){
+    .slide{
+        transition: none;
+        transition-delay: 0;
+        margin: 0 32px;
+        height: 800px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .c2{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
 
-
-
-
-
-
-
-
-
-
+    .menu {
+        position: fixed;
+        transform: translateY(0);
+        display: none;
+        transition: none 0;
+    }
+    .showMenu {
+        transform: translateY(0);
+        display: block;
+    }
+}
+/* reduce motion for bar cards is located at bottom of tilt.js */
 

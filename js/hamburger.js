@@ -1,4 +1,10 @@
+console.log('hamburger load');
+
+// defined variables
+
 const menu = document.querySelector(".menu");
+
+// did not end up needing menuItems. Keeping for future use
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger= document.querySelector(".hamburger");
 const closeIcon= document.querySelector(".closeIcon");
@@ -16,7 +22,11 @@ function toggleMenu() {
   }
 }
 
+// run toggleMenu function on click
+
 hamburger.addEventListener("click", toggleMenu);
+
+// on load to hide close Menu. Included in HTML 'on load'
 function loadMenu(){
     closeIcon.style.display = "none";
 }
