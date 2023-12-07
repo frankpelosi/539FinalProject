@@ -178,7 +178,7 @@ p{
     text-align: center;
     width: 80%;
     color: white; 
-    padding: 16px;
+    padding: 0px;
     margin: 0 auto;
 }
 
@@ -190,8 +190,12 @@ p{
 
 
 .footer{
-    margin: 100px 0 0 0;
-    width: 100%;
+    max-width: 100%;
+}
+.footer h2{
+    font-size: 16px;
+    color:rgb(35, 35, 35);
+    font-weight: normal;
 }
 
 
@@ -202,6 +206,7 @@ p{
 .homebanner{
     background: url(../images/homeimages/homebanner.jpg) no-repeat center;
     background-size: cover;
+    background-color: black;
 }
 
 .feature-top{
@@ -211,7 +216,7 @@ p{
 /* shadow class for featured shading */
 .shadow{
     background:rgba(0, 0, 0, 0.3);
-    padding: 16px;
+    padding: 8px 0;
 }
 
 
@@ -220,12 +225,12 @@ p{
 .carousel{
     box-sizing: border-box;
     position: relative;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
 }
 
 .carousel ul{
-    min-height: 500px;
+    min-height: 550px;
 }
 .featured-top{
     margin-bottom: 16px
@@ -244,8 +249,8 @@ p{
     /* transition for carousel.js */
     transition: 200ms opacity ease-in-out;
     transition-delay: 200ms;
-    margin: 0 32px;
-    height: 500px;
+    margin: 0 8px;
+    height: 550px;
     background: rgba(255, 255, 255, 0.2);
 }
 
@@ -402,7 +407,13 @@ p{
     }
     .carousel-button{
         font-size: 4rem;
-}
+        }
+     .carousel-button.prev{
+            left: 10px;
+        }
+    .carousel-button.next{
+            right: 10px;
+        }
 
 }
 
