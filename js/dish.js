@@ -57,7 +57,6 @@ cacio.addEventListener('click', function(){
 
 
 // SAME PROCESS FOR SUBSEQUENT LIST ITEMS
-
 carbonara.addEventListener('click', function(){
     dishWrapper.style.backgroundImage = "url(images/restaurantimages/rome-dishes/carbonara.jpg";
     dishTitle.innerHTML = "Carbonara";

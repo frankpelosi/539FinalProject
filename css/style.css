@@ -202,8 +202,6 @@ p{
 .homebanner{
     background: url(../images/homeimages/homebanner.jpg) no-repeat center;
     background-size: cover;
-    background-color: black;
-
 }
 
 .feature-top{
@@ -514,8 +512,8 @@ p{
 
 /* Set styling for dish.js to remove and add active class */
 .i1:hover, .dish-active{
-    text-decoration: underline;
     font-weight: bold;
+    font-style: italic;
 }
 
 .restaurant-image{
