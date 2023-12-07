@@ -66,6 +66,10 @@ body{
     padding-top: 4rem;
     padding-left: 32px;
 }
+
+.navlogo{
+    font-family: 'Italiana', Geneva, Tahoma, sans-serif;
+}
 /* Class for Hamburger JS */
 
 .showMenu {
@@ -77,11 +81,9 @@ body{
 
 .menu li{
     padding: 16px 0;
+    font-size: 20px;
 }
-.menu h1{
-    font-family: 'Italiana', Geneva, Tahoma, sans-serif;
-    font-size: 24px;
-}
+
 
 .menu a{
     text-decoration: none;
@@ -450,7 +452,7 @@ p{
 .bar-subsection{
     /* for tilt animation */
     transform-style: preserve-3d;
-    transform: perspective (1000px);
+
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -630,7 +632,6 @@ p{
   @media (prefers-reduced-motion){
     .slide{
         transition: none;
-        transition-delay: 0;
         margin: 0 32px;
         height: 800px;
         background: rgba(255, 255, 255, 0.2);
@@ -645,7 +646,7 @@ p{
         position: fixed;
         transform: translateY(0);
         display: none;
-        transition: none 0;
+        transition: none;
     }
     .showMenu {
         transform: translateY(0);
